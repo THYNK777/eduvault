@@ -5,6 +5,7 @@ import { Search } from 'lucide-react';
 import ProjectCard from '@/components/project-card';
 import { mockProjects } from '@/lib/mock-data';
 import type { Project } from '@/lib/types';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function RoomOfUnfinishedSpells() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,7 +19,28 @@ export default function RoomOfUnfinishedSpells() {
   return (
     <div className="flex flex-col h-full">
       <header className="mb-8">
-        <h1 className="text-4xl font-headline font-bold text-accent">The Room of Unfinished Spells</h1>
+        <TooltipProvider>
+            <Tooltip delayDuration={100}>
+                <TooltipTrigger asChild>
+                    <h1 className="text-4xl font-headline font-bold text-accent cursor-default">The Room of Unfinished Spells</h1>
+                </TooltipTrigger>
+                <TooltipContent 
+                  side="bottom" 
+                  align="start" 
+                  className="max-w-xs border-yellow-900/50"
+                  style={{
+                    color: '#946B2D',
+                    textShadow: '0 0 8px #946B2D',
+                    fontWeight: 'bold',
+                    fontSize: '0.875rem'
+                  }}
+                  >
+                  <p>
+                  The Room of Unfinished Spells is where half-baked ideas and paused projects wait to be revived like a magical storage of “to-be-continued.” ✨ Here, you can even summon fellow Spellcasters to join your quest and bring your lost research back to life! 🪄📜
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+        </TooltipProvider>
         <p className="text-muted-foreground mt-2">Discover, collaborate on, and revive dormant academic projects.</p>
       </header>
 
