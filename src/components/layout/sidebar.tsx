@@ -20,7 +20,7 @@ const navItems: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutGrid },
   { href: '/vault', label: 'Vault Project', icon: Archive },
   { href: '/scrolls', label: 'Restricted Scrolls', icon: ScrollText },
-  { href: '/profile', label: 'My Hall of Brains', icon: UserCircle },
+  { href: '/profile', label: "The Scholar's Sanctum", icon: UserCircle },
 ];
 
 export default function AppSidebar() {

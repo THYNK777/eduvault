@@ -18,7 +18,7 @@ export default function AppHeader() {
       case '/scrolls':
         return 'Restricted Scrolls';
       case '/profile':
-        return 'My Hall of Brains';
+        return "The Scholar's Sanctum";
       default:
         return '';
     }

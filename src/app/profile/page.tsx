@@ -17,7 +17,7 @@ export default function ProfilePage() {
           <AvatarFallback className="text-4xl">{user.name.charAt(0)}</AvatarFallback>
         </Avatar>
         <div>
-          <h1 className="text-5xl font-headline font-bold">{user.name}'s Hall of Brains</h1>
+          <h1 className="text-5xl font-headline font-bold">The Scholar's Sanctum</h1>
           <Card className="mt-4">
             <CardHeader>
                 <CardTitle className="font-headline">Known Spells (Skills)</CardTitle>
