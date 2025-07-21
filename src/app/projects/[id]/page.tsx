@@ -20,6 +20,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   const owner = mockUsers.find(u => u.id === project.ownerId);
   const teamMembers = mockUsers.filter(u => project.teamIds.includes(u.id));
 
+  // Split the content to style the attribution separately
+  const contentParts = project.mainContent.split('\n\n—');
+  const mainQuote = contentParts[0];
+  const attribution = contentParts.length > 1 ? `—${contentParts[1]}` : '';
+
   return (
     <div className="max-w-5xl mx-auto space-y-12">
       <header className="space-y-4">
@@ -56,7 +61,8 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                     <CardTitle className="font-headline text-2xl">Project Grimoire</CardTitle>
                 </CardHeader>
                 <CardContent className="prose prose-invert max-w-none text-muted-foreground/90">
-                    <p>{project.mainContent}</p>
+                    <p>{mainQuote}</p>
+                    {attribution && <p className="font-bold text-right">{attribution}</p>}
                 </CardContent>
             </Card>
             <FelixFunding project={project} user={owner!} />
