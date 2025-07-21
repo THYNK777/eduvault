@@ -53,6 +53,15 @@ interface Message {
   sender: 'bot' | 'user';
 }
 
+const mysteriousQuotes = [
+  "So… you wish to go there, do you? Very well. But don’t say the menu didn’t warn you.",
+  "Ah, brave soul... you truly wish to click that path? Some doors open only once.",
+  "Curiosity leads many to that destination… few return the same.",
+  "You seek the page beyond? Bold choice. Just remember — not all who wander are ready.",
+  "You sure you want to go there? Even magic has second thoughts.",
+  "So you’ve chosen the cursed path from the menu... fascinating."
+];
+
 export default function PatronusNavigator({ onClose }: PatronusNavigatorProps) {
   const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([
@@ -108,7 +117,8 @@ export default function PatronusNavigator({ onClose }: PatronusNavigatorProps) {
       if (!querySnapshot.empty) {
         const docData = querySnapshot.docs[0].data();
         const route = docData.route;
-        const botReply: Message = { text: `🪄 Off we go – navigating to ${route}`, sender: 'bot' };
+        const randomQuote = mysteriousQuotes[Math.floor(Math.random() * mysteriousQuotes.length)];
+        const botReply: Message = { text: `🪄 ${randomQuote}`, sender: 'bot' };
         setMessages((prev) => [...prev, botReply]);
         setTimeout(() => {
             router.push(route);
