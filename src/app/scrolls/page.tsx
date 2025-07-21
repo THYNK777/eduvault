@@ -8,12 +8,12 @@ export default function ScrollsPage() {
     <div className="max-w-4xl mx-auto">
       <header className="mb-8 text-center">
         <h1 className="text-5xl font-headline font-bold text-accent">The Restricted Section</h1>
-        <p className="text-muted-foreground mt-2 text-lg">
+        <p className="mt-2 text-lg" style={{ color: '#CD7F32' }}>
           These scrolls contain potent knowledge, available only for a limited time. Study them before they return to the vault.
         </p>
       </header>
       
-      <Alert variant="destructive" className="mb-8 bg-destructive/20">
+      <Alert variant="destructive" className="mb-8">
         <Clock className="h-4 w-4" />
         <AlertTitle className="font-bold">Time-Sensitive Knowledge</AlertTitle>
         <AlertDescription>
