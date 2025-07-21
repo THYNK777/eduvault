@@ -24,10 +24,10 @@ export const mockUsers: User[] = [
 export const mockProjects: Project[] = [
   {
     id: 'proj-1',
-    title: 'The Marauder\'s Map of Social Networks',
+    title: 'Nitin Gadkari – “Innovation Overcomes All Roads”',
     description: 'A deep learning model to predict social connections and viral content spread, using graph neural networks.',
     field: 'Divination',
-    tags: ['AI', 'GNN', 'Social Media', 'Predictive Analytics'],
+    tags: ['AI', 'hydrogen vehicles', 'Social Media', 'Predictive Analytics'],
     ownerId: 'user-1',
     teamIds: ['user-1', 'user-2'],
     isComplete: false,
