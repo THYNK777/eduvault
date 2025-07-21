@@ -7,7 +7,6 @@ import { magicalFieldDetails } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import FelixFunding from './felix-funding';
 import { Separator } from '@/components/ui/separator';
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
@@ -65,7 +64,6 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                     {attribution && <p className="font-bold text-right">{attribution}</p>}
                 </CardContent>
             </Card>
-            <FelixFunding project={project} user={owner!} />
         </div>
         <div className="space-y-8">
           <Card>
