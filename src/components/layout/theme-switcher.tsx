@@ -31,6 +31,12 @@ export default function ThemeSwitcher() {
         <DropdownMenuItem onClick={() => setTheme('gryffindor')}>
           Gryffindor
         </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('slytherin')}>
+          Slytherin
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('hufflepuff')}>
+          Hufflepuff
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

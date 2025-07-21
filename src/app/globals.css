@@ -78,6 +78,78 @@ body {
     --sidebar-border: 15 50% 25%;
     --sidebar-ring: 42 78% 59%;
   }
+
+  .slytherin {
+    --background: 120 10% 8%; /* Almost black with a green tint */
+    --foreground: 120 10% 85%; /* Pale silver-grey */
+    --card: 120 12% 12%; /* Dark charcoal green */
+    --card-foreground: 120 10% 85%;
+    --popover: 120 10% 8%;
+    --popover-foreground: 120 10% 85%;
+    --primary: 130 50% 30%; /* Deep Emerald Green */
+    --primary-foreground: 120 20% 95%; /* Bright silver */
+    --secondary: 120 8% 18%;
+    --secondary-foreground: 120 10% 85%;
+    --muted: 120 8% 18%;
+    --muted-foreground: 120 5% 55%;
+    --accent: 120 30% 75%; /* Bright Silver */
+    --accent-foreground: 130 50% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 120 10% 85%;
+    --border: 120 12% 18%;
+    --input: 120 12% 18%;
+    --ring: 130 50% 40%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 120 10% 8%;
+    --sidebar-foreground: 120 10% 85%;
+    --sidebar-primary: 120 30% 75%;
+    --sidebar-primary-foreground: 130 50% 10%;
+    --sidebar-accent: 120 12% 14%;
+    --sidebar-accent-foreground: 120 10% 85%;
+    --sidebar-border: 120 12% 18%;
+    --sidebar-ring: 130 50% 40%;
+  }
+
+  .hufflepuff {
+    --background: 45 15% 10%; /* Warm, dark brown-black */
+    --foreground: 45 30% 90%; /* Creamy off-white */
+    --card: 45 20% 15%; /* Dark, earthy brown */
+    --card-foreground: 45 30% 90%;
+    --popover: 45 15% 10%;
+    --popover-foreground: 45 30% 90%;
+    --primary: 48 95% 55%; /* Bright, cheerful Yellow */
+    --primary-foreground: 45 25% 10%; /* Dark text on primary */
+    --secondary: 0 0% 15%; /* Muted Black */
+    --secondary-foreground: 45 30% 90%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 45 15% 60%;
+    --accent: 0 0% 50%; /* Neutral Grey */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 45 30% 90%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 48 95% 55%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 45 15% 10%;
+    --sidebar-foreground: 45 30% 90%;
+    --sidebar-primary: 48 95% 55%;
+    --sidebar-primary-foreground: 45 25% 10%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 45 30% 90%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 48 95% 55%;
+  }
 }
 
 @layer base {
