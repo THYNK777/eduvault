@@ -26,14 +26,14 @@ export default function ScrollsPage() {
           <div className="relative h-80 w-full">
             <Image
               src="https://placehold.co/1200x800.png"
-              alt="Advanced Potion-Making"
+              alt="Cybersecurity concept"
               layout="fill"
               objectFit="cover"
-              data-ai-hint="old book"
+              data-ai-hint="cybersecurity lock"
             />
           </div>
-          <CardTitle className="font-headline text-4xl mt-6">Advanced Potion-Making: The Art of Subtlety</CardTitle>
-          <CardDescription>A masterclass by Professor S. Snape</CardDescription>
+          <CardTitle className="font-headline text-4xl mt-6">The Rising Importance of Cybersecurity in the Digital Age</CardTitle>
+          <CardDescription>by Alex Morgan</CardDescription>
         </CardHeader>
         <CardContent className="prose prose-invert max-w-none text-lg text-muted-foreground/90 leading-relaxed">
           <p>
