@@ -19,6 +19,12 @@ export const mockUsers: User[] = [
     avatarUrl: 'https://placehold.co/100x100.png',
     skills: ['C++', 'Unreal Engine', 'Computer Graphics', 'Game Physics'],
   },
+  {
+    id: 'user-4',
+    name: 'Ankur Warikoo',
+    avatarUrl: 'https://placehold.co/100x100.png',
+    skills: ['Growth Hacking', 'Public Speaking', 'Content Creation', 'Startups'],
+  }
 ];
 
 export const mockProjects: Project[] = [
@@ -59,7 +65,7 @@ So don’t be afraid of the unfinished. Embrace the mess. Trust your instincts. 
     field: 'Charms',
     tags: ['Quantum Computing', 'Cryptography', 'Qiskit', 'Hardware'],
     ownerId: 'user-3',
-    teamIds: ['user-3', ],
+    teamIds: ['user-3', 'user-4'],
     isComplete: false,
     mainContent: 'The most transformative ideas don’t emerge fully formed. They evolve — quietly, patiently, iteratively. Google itself began as a research project. What mattered wasn’t just brilliance, but belief. If your project feels incomplete, it doesn’t mean it’s unworthy. Keep nurturing it, brick by brick. Sometimes, the world catches up to your vision — not the other way around.\n\n— Sundar Pichai, CEO of Alphabet Inc.',
     imageUrl: 'https://placehold.co/600x400.png',
