@@ -117,15 +117,15 @@ export default function PatronusNavigator({ onClose }: PatronusNavigatorProps) {
       if (!querySnapshot.empty) {
         const docData = querySnapshot.docs[0].data();
         const route = docData.route;
-        const randomQuote = mysteriousQuotes[Math.floor(Math.random() * mysteriousQuotes.length)];
-        const botReply: Message = { text: `🪄 ${randomQuote}`, sender: 'bot' };
+        const botReply: Message = { text: `🪄 Off we go... navigating to ${input}!`, sender: 'bot' };
         setMessages((prev) => [...prev, botReply]);
         setTimeout(() => {
             router.push(route);
             onClose();
         }, 1500);
       } else {
-        const botReply: Message = { text: '🙁 I’m afraid that location is unknown…', sender: 'bot' };
+        const randomQuote = mysteriousQuotes[Math.floor(Math.random() * mysteriousQuotes.length)];
+        const botReply: Message = { text: `🙁 ${randomQuote}`, sender: 'bot' };
         setMessages((prev) => [...prev, botReply]);
       }
     } catch (error) {
