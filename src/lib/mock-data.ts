@@ -31,7 +31,7 @@ export const mockProjects: Project[] = [
     ownerId: 'user-1',
     teamIds: ['user-1', 'user-2'],
     isComplete: false,
-    mainContent: 'Project proposal focusing on using PyTorch Geometric to build a model that understands and predicts user interactions on a decentralized social platform. Initial datasets include anonymized interaction graphs from Mastodon.',
+    mainContent: 'India’s greatest projects didn’t begin with money — they began with courage. You don’t wait for the perfect time. You begin with what you have. I’ve seen highways built where there were none, and progress where there was resistance. The same applies to your ideas. If you have a half-finished plan, don’t abandon it. Revive it. Innovate it. And remember — sometimes the best roads are the ones you build yourself.\n\n— Nitin Gadkari, Minister of Road Transport & Highways',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'social network',
   },
