@@ -29,7 +29,7 @@ export default function ScrollsPage() {
               alt="Cybersecurity concept"
               layout="fill"
               objectFit="cover"
-              data-ai-hint="cybersecurity lock"
+              data-ai-hint="cybersecurity digital"
             />
           </div>
           <CardTitle className="font-headline text-4xl mt-6">The Rising Importance of Cybersecurity in the Digital Age</CardTitle>
