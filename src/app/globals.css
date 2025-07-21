@@ -150,6 +150,10 @@ body {
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 48 95% 55%;
   }
+
+  html {
+    cursor: url('https://i.makeagif.com/media/11-21-2022/G9GUah.gif'), auto;
+  }
 }
 
 @layer base {
