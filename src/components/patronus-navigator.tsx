@@ -124,7 +124,7 @@ export default function PatronusNavigator({ onClose }: PatronusNavigatorProps) {
         setTimeout(() => {
             router.push(route);
             onClose();
-        }, 5000);
+        }, 2000);
       } else {
         const randomQuote = mysteriousQuotes[Math.floor(Math.random() * mysteriousQuotes.length)];
         const botReply: Message = { text: `🙁 ${randomQuote}`, sender: 'bot' };
