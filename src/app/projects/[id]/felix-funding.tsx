@@ -2,7 +2,7 @@
 import { useState, useTransition } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { WandSparkles, Lightbulb, Loader2, BookUser, Banknote } from 'lucide-react';
+import { WandSparkles, Lightbulb, Loader2, BookUser } from 'lucide-react';
 import { generateFundingSearchQueries, GenerateFundingSearchQueriesOutput } from '@/ai/flows/generate-search-queries';
 import type { Project, User } from '@/lib/types';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -70,24 +70,6 @@ export default function FelixFunding({ project, user }: { project: Project, user
 
         {results && (
           <div className="space-y-8">
-            {results.fundingSources?.length > 0 && (
-              <div>
-                <h3 className="font-semibold mb-4 text-lg flex items-center gap-2"><Banknote className="text-accent" />Potential Funding Sources</h3>
-                <div className="space-y-4">
-                  {results.fundingSources.map((source, index) => (
-                    <Card key={index} className="bg-secondary/50">
-                        <CardHeader className='pb-2'>
-                            <CardTitle className='text-base font-medium'>{source.name}</CardTitle>
-                            <CardDescription className='capitalize text-xs text-accent'>{source.type}</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <p className='text-sm text-muted-foreground'>{source.description}</p>
-                        </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            )}
             
             {results.mentors?.length > 0 && (
               <div>
