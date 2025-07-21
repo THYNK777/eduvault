@@ -13,9 +13,9 @@ export default function ScrollsPage() {
         </p>
       </header>
       
-      <Alert className="mb-8 border-accent text-accent-foreground bg-accent/10">
-        <Clock className="h-4 w-4" />
-        <AlertTitle className="font-bold">Time-Sensitive Knowledge</AlertTitle>
+      <Alert className="mb-8 border-yellow-900/50 bg-[#4d3a1f]/20 text-yellow-200/90">
+        <Clock className="h-4 w-4 text-yellow-600" />
+        <AlertTitle className="font-bold text-yellow-400">Time-Sensitive Knowledge</AlertTitle>
         <AlertDescription>
           This week's scroll will vanish in <strong>3 days, 14 hours</strong>.
         </AlertDescription>
