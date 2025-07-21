@@ -59,7 +59,9 @@ const mysteriousQuotes = [
   "Curiosity leads many to that destination… few return the same.",
   "You seek the page beyond? Bold choice. Just remember — not all who wander are ready.",
   "You sure you want to go there? Even magic has second thoughts.",
-  "So you’ve chosen the cursed path from the menu... fascinating."
+  "So you’ve chosen the cursed path from the menu... fascinating.",
+  "Consult the Menu, if you must... though the page it summons is not for the faint of heart.",
+  "In the menu lies the route... but the destination? Ah, even Dumbledore would hesitate."
 ];
 
 export default function PatronusNavigator({ onClose }: PatronusNavigatorProps) {
