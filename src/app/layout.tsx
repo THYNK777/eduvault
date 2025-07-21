@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import DashboardLayout from '@/components/layout/dashboard-layout';
+import { ThemeProvider } from '@/context/theme-provider';
 
 export const metadata: Metadata = {
   title: 'EduVault',
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -24,8 +25,14 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <DashboardLayout>{children}</DashboardLayout>
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="ravenclaw"
+          enableSystem={false}
+        >
+          <DashboardLayout>{children}</DashboardLayout>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

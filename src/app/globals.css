@@ -7,32 +7,32 @@ body {
 }
 
 @layer base {
-  :root {
-    --background: 215 71% 12%;
+  :root, .ravenclaw {
+    --background: 215 71% 12%; /* Dark Navy Blue */
     --foreground: 210 40% 98%;
     --card: 215 71% 15%;
     --card-foreground: 210 40% 98%;
     --popover: 215 71% 12%;
     --popover-foreground: 210 40% 98%;
-    --primary: 215 86% 42%;
+    --primary: 215 86% 42%; /* Deep Sapphire Blue */
     --primary-foreground: 210 40% 98%;
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217 33% 17%;
     --muted-foreground: 215 5% 53.1%;
-    --accent: 39 100% 60%;
+    --accent: 39 100% 60%; /* Gold */
     --accent-foreground: 215 86% 12%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
     --border: 217 33% 22%;
     --input: 217 33% 22%;
     --ring: 39 100% 60%;
+    --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
     --sidebar-background: 215 71% 12%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 39 100% 60%;
@@ -42,39 +42,41 @@ body {
     --sidebar-border: 217 33% 22%;
     --sidebar-ring: 39 100% 60%;
   }
-  .dark {
-    --background: 215 71% 12%;
-    --foreground: 210 40% 98%;
-    --card: 215 71% 15%;
-    --card-foreground: 210 40% 98%;
-    --popover: 215 71% 12%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 215 86% 42%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 5% 53.1%;
-    --accent: 39 100% 60%;
-    --accent-foreground: 215 86% 12%;
+
+  .gryffindor {
+    --background: 23 23% 12%; /* Darker, almost-black */
+    --foreground: 38 60% 85%; /* Parchment text */
+    --card: 15 50% 18%; /* Dark reddish-brown */
+    --card-foreground: 38 60% 85%;
+    --popover: 23 23% 12%;
+    --popover-foreground: 38 60% 85%;
+    --primary: 0 65% 38%; /* Dark Red */
+    --primary-foreground: 42 78% 91%; /* Light Gold text on primary */
+    --secondary: 15 40% 25%;
+    --secondary-foreground: 38 60% 85%;
+    --muted: 15 40% 25%;
+    --muted-foreground: 38 40% 65%;
+    --accent: 42 78% 59%; /* Mustard Gold */
+    --accent-foreground: 0 65% 15%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 22%;
-    --input: 217 33% 22%;
-    --ring: 39 100% 60%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 215 71% 12%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 39 100% 60%;
-    --sidebar-primary-foreground: 215 86% 12%;
-    --sidebar-accent: 215 71% 18%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 22%;
-    --sidebar-ring: 39 100% 60%;
+    --destructive-foreground: 38 60% 85%;
+    --border: 15 50% 25%;
+    --input: 15 50% 25%;
+    --ring: 42 78% 59%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 23 23% 12%;
+    --sidebar-foreground: 38 60% 85%;
+    --sidebar-primary: 42 78% 59%;
+    --sidebar-primary-foreground: 0 65% 15%;
+    --sidebar-accent: 15 50% 22%;
+    --sidebar-accent-foreground: 38 60% 85%;
+    --sidebar-border: 15 50% 25%;
+    --sidebar-ring: 42 78% 59%;
   }
 }
 

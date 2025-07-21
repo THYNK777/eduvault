@@ -2,6 +2,7 @@
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { usePathname } from 'next/navigation';
+import ThemeSwitcher from './theme-switcher';
 
 export default function AppHeader() {
   const isMobile = useIsMobile();
@@ -32,6 +33,7 @@ export default function AppHeader() {
        <div className="flex-1">
          <h1 className="text-lg font-semibold">{title}</h1>
        </div>
+       <ThemeSwitcher />
     </header>
   );
 }
