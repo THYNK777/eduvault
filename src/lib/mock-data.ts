@@ -37,8 +37,10 @@ export const mockProjects: Project[] = [
   },
   {
     id: 'proj-2',
-    title: 'Self-Organizing Gillyweed',
-    description: 'A study in synthetic biology to create a strain of algae that produces breathable oxygen underwater for extended periods.',
+    title: 'Steve Jobs – “The Dots Will Connect”',
+    description: `💡 "What feels like a mess today may become your masterpiece tomorrow — don’t quit on your dots."
+
+`,
     field: 'Potions',
     tags: ['Biochemistry', 'Synthetic Biology', 'CRISPR', 'Metabolic Engineering'],
     ownerId: 'user-2',
