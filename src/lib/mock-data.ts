@@ -25,7 +25,7 @@ export const mockProjects: Project[] = [
   {
     id: 'proj-1',
     title: 'Nitin Gadkari – “Innovation Overcomes All Roads”',
-    description: 'A deep learning model to predict social connections and viral content spread, using graph neural networks.',
+    description: '“Dream big, build bigger — even the impossible becomes a highway with enough will.” — Inspired by Nitin Gadkari',
     field: 'Divination',
     tags: ['AI', 'hydrogen vehicles', 'Social Media', 'Predictive Analytics'],
     ownerId: 'user-1',
@@ -38,9 +38,7 @@ export const mockProjects: Project[] = [
   {
     id: 'proj-2',
     title: 'Steve Jobs – “The Dots Will Connect”',
-    description: `💡 "What feels like a mess today may become your masterpiece tomorrow — don’t quit on your dots."
-
-`,
+    description: `💡 "What feels like a mess today may become your masterpiece tomorrow — don’t quit on your dots."`,
     field: 'Potions',
     tags: ['Biochemistry', 'Synthetic Biology', 'CRISPR', 'Metabolic Engineering'],
     ownerId: 'user-2',
