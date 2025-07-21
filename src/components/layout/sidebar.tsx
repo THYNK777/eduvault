@@ -14,13 +14,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { mockUsers } from '@/lib/mock-data';
 import type { NavItem } from '@/lib/types';
 import Logo from '@/components/logo';
-import { LayoutGrid, Archive, ScrollText, UserCircle, MessageCircle } from 'lucide-react';
+import { LayoutGrid, Users, ScrollText, UserCircle, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import PatronusNavigator from '@/components/patronus-navigator';
 
 const navItems: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutGrid },
-  { href: '/vault', label: 'Vault Project', icon: Archive },
+  { href: '/vault', label: 'Recruitment Hall', icon: Users },
   { href: '/scrolls', label: 'Restricted Scrolls', icon: ScrollText },
   { href: '/profile', label: "The Scholar's Sanctum", icon: UserCircle },
 ];

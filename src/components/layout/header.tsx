@@ -14,7 +14,7 @@ export default function AppHeader() {
       case '/':
         return 'The Room of Unfinished Spells';
       case '/vault':
-        return 'Vault Project';
+        return 'The Recruitment Hall';
       case '/scrolls':
         return 'Restricted Scrolls';
       case '/profile':

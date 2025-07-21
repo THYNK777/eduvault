@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react';
 import type { LucideProps } from 'lucide-react';
-import { BrainCircuit, Share2, Cog, FlaskConical, Combine, Leaf, UserCircle, LayoutGrid, Archive, ScrollText, MessageCircle } from 'lucide-react';
+import { BrainCircuit, Share2, Cog, FlaskConical, Combine, Leaf, UserCircle, LayoutGrid, Users, ScrollText, MessageCircle } from 'lucide-react';
 
 export type MagicalField = 'Divination' | 'Runes' | 'Charms' | 'Potions' | 'Transfiguration' | 'Herbology';
 
