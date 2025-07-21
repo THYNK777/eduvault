@@ -19,8 +19,21 @@ const GenerateFundingSearchQueriesInputSchema = z.object({
 });
 export type GenerateFundingSearchQueriesInput = z.infer<typeof GenerateFundingSearchQueriesInputSchema>;
 
+const FundingSourceSchema = z.object({
+    name: z.string().describe("The name of the funding source (e.g., 'Gringotts Grants for Magical Startups')."),
+    description: z.string().describe("A brief description of why this source is a good fit for the project."),
+    type: z.enum(['grant', 'scholarship', 'fellowship']).describe("The type of funding.")
+});
+
+const MentorSchema = z.object({
+    name: z.string().describe("The name of a potential mentor."),
+    expertise: z.string().describe("The mentor's area of expertise and why they are a good match."),
+});
+
 const GenerateFundingSearchQueriesOutputSchema = z.object({
   searchQueries: z.array(z.string()).describe('An array of search queries tailored for finding funding opportunities.'),
+  fundingSources: z.array(FundingSourceSchema).describe("A list of potential funding sources."),
+  mentors: z.array(MentorSchema).describe("A list of potential mentors."),
 });
 export type GenerateFundingSearchQueriesOutput = z.infer<typeof GenerateFundingSearchQueriesOutputSchema>;
 
@@ -32,19 +45,19 @@ const prompt = ai.definePrompt({
   name: 'generateFundingSearchQueriesPrompt',
   input: {schema: GenerateFundingSearchQueriesInputSchema},
   output: {schema: GenerateFundingSearchQueriesOutputSchema},
-  prompt: `You are an AI assistant specialized in generating search queries to help students find funding opportunities for their academic projects.
+  prompt: `You are an AI assistant specialized in helping students find funding opportunities and mentorship for their academic projects.
 
-  Given the following information about a student's project, generate an array of diverse search queries that can be used to find relevant research grants, scholarships, and mentors.
+  Given the following information about a student's project, generate:
+  1. An array of diverse search queries.
+  2. A list of 2-3 potential funding sources (grants, scholarships) with a brief explanation of their relevance.
+  3. A list of 1-2 potential mentors with expertise relevant to the project.
 
   Project Title: {{{projectTitle}}}
   Project Description: {{{projectDescription}}}
   Magic Field/Subject: {{{magicField}}}
   User Skills: {{#each userSkills}}{{{this}}}, {{/each}}
 
-  Ensure that the search queries are specific, targeted, and cover a range of potential funding sources and mentorship opportunities.
-  The magic field name should be incorporated in at least one search query.
-  Consider skills and the project title when constructing the queries.
-  Return the queries in an array.
+  Ensure the output is creative, relevant to the magical/academic theme, and structured according to the output schema.
 `,
 });
 
