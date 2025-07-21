@@ -9,7 +9,7 @@ export const mockUsers: User[] = [
   },
   {
     id: 'user-2',
-    name: 'Ankur Warikoo',
+    name: 'Steve Jobs',
     avatarUrl: 'https://placehold.co/100x100.png',
     skills: ['JavaScript', 'React', 'Node.js', 'System Design'],
   },
