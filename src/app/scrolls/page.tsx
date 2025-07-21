@@ -36,27 +36,44 @@ export default function ScrollsPage() {
           <CardDescription>by Alex Morgan</CardDescription>
         </CardHeader>
         <CardContent className="prose prose-invert max-w-none text-lg text-muted-foreground/90 leading-relaxed">
+          <p className="text-base italic">Cybersecurity Researcher and Tech Analyst</p>
           <p>
-            Welcome, aspiring potioneers, to a domain where precision is paramount and intuition is your most trusted guide.
-            The art of potion-making is not one of flamboyant wand-waving or silly incantations. It is a subtle science,
-            an exact art. Here, we delve beyond the rudimentary instructions of your standard textbooks.
+            In today’s interconnected world, cybersecurity has evolved from a niche technical concern into a global priority. As businesses, governments, and individuals increasingly depend on digital platforms, the need for robust cyber defenses has never been more critical.
           </p>
+          
+          <h3>What is Cybersecurity?</h3>
           <p>
-            This week's scroll focuses on the Draught of Living Death, a potion of immense power and complexity.
-            We will explore the crucial role of the Sopophorous bean's infusion—a step often botched by amateurs.
-            It is not enough to merely crush the bean; one must release its juices with the flat side of a silver dagger,
-            a technique that dramatically enhances its potency. We will also examine the counter-clockwise stirring
-            required after adding the powdered root of asphodel, a detail that prevents the concoction from turning into
-            a useless, viscous sludge.
+            Cybersecurity refers to the practice of protecting systems, networks, and programs from digital attacks. These cyber threats often aim to access, change, or destroy sensitive information, extort money, or interrupt normal business processes. With the rise in cloud computing, Internet of Things (IoT) devices, and remote work, vulnerabilities have multiplied.
           </p>
-          <blockquote>
-            "The mind is a complex and many-layered thing, Potter... or at least, most minds are."
-          </blockquote>
+
+          <h3>Common Threats in Cybersecurity</h3>
+          <ul>
+            <li><strong>Phishing Attacks</strong> – Deceptive emails or messages that trick users into revealing personal information.</li>
+            <li><strong>Ransomware</strong> – Malicious software that encrypts data and demands payment for decryption.</li>
+            <li><strong>Data Breaches</strong> – Unauthorized access to confidential information.</li>
+            <li><strong>Zero-Day Exploits</strong> – Attacks on software vulnerabilities unknown to the vendor.</li>
+          </ul>
+
+          <h3>Why It Matters</h3>
           <p>
-            Pay close attention. The knowledge contained herein is not for the faint of heart or the unfocused mind.
-            Master these subtleties, and you will find your potions elevate from mere school-level brews to concoctions
-            of true power and elegance. Fail, and you risk nothing short of disaster. The choice, as always, is yours.
+            Cyberattacks can cripple businesses, compromise national security, and ruin reputations. According to recent reports, the global cost of cybercrime is projected to reach over $10 trillion annually by 2025. As digital infrastructure becomes more complex, so does the threat landscape.
           </p>
+
+          <h3>How to Stay Protected</h3>
+          <ul>
+            <li>Use strong, unique passwords and enable multi-factor authentication.</li>
+            <li>Regularly update software to patch vulnerabilities.</li>
+            <li>Train employees on recognizing phishing and social engineering tactics.</li>
+            <li>Implement robust firewalls, intrusion detection systems, and regular security audits.</li>
+          </ul>
+
+          <hr className="border-accent/30 my-6" />
+
+          <div className="text-sm text-muted-foreground">
+              <p><strong>Date:</strong> July 21, 2025</p>
+              <p><strong>Institution/Organization:</strong> Independent Researcher</p>
+              <p><strong>Contact:</strong> alex.morgan.cyber@protonmail.com</p>
+          </div>
         </CardContent>
       </Card>
     </div>
