@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { initializeApp, getApps, type FirebaseApp } from 'firebase/app';
-import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
-import { mockUsers } from '@/lib/mock-data';
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import { initializeApp, getApps, type FirebaseApp } from "firebase/app";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
+import { mockUsers } from "@/lib/mock-data";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from "@/components/ui/dropdown-menu";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -31,24 +31,28 @@ if (!getApps().length) {
   app = getApps()[0];
 }
 const db = getFirestore(app);
-const availableThemes = ['ravenclaw', 'gryffindor', 'slytherin', 'hufflepuff'];
+const availableThemes = ["ravenclaw", "gryffindor", "slytherin", "hufflepuff"];
 
 export default function ThemeSwitcher() {
-  const { theme: currentTheme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   const currentUser = mockUsers[0];
 
   const handleThemeChange = async (theme: string) => {
     setTheme(theme);
     if (currentUser) {
-        const userDocRef = doc(db, 'users', currentUser.id);
-        try {
-            await setDoc(userDocRef, { 
-                currentTheme: theme,
-                availableThemes: availableThemes 
-            }, { merge: true });
-        } catch (error) {
-            console.error("Error saving theme to Firestore:", error);
-        }
+      const userDocRef = doc(db, "users", currentUser.id);
+      try {
+        await setDoc(
+          userDocRef,
+          {
+            currentTheme: theme,
+            availableThemes: availableThemes,
+          },
+          { merge: true }
+        );
+      } catch (error) {
+        console.error("Error saving theme to Firestore:", error);
+      }
     }
   };
 
@@ -62,16 +66,16 @@ export default function ThemeSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => handleThemeChange('ravenclaw')}>
+        <DropdownMenuItem onClick={() => handleThemeChange("ravenclaw")}>
           Ravenclaw
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => handleThemeChange('gryffindor')}>
+        <DropdownMenuItem onClick={() => handleThemeChange("gryffindor")}>
           Gryffindor
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => handleThemeChange('slytherin')}>
+        <DropdownMenuItem onClick={() => handleThemeChange("slytherin")}>
           Slytherin
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => handleThemeChange('hufflepuff')}>
+        <DropdownMenuItem onClick={() => handleThemeChange("hufflepuff")}>
           Hufflepuff
         </DropdownMenuItem>
       </DropdownMenuContent>
