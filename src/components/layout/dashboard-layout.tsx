@@ -1,8 +1,8 @@
 
 'use client';
 import type { ReactNode } from 'react';
-import { useEffect, useState } from 'react';
-import { SidebarProvider, Sidebar, SidebarInset } from '@/components/ui/sidebar';
+import { useEffect } from 'react';
+import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import AppSidebar from './sidebar';
 import AppHeader from './header';
 import { useTheme } from 'next-themes';
