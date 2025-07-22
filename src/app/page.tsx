@@ -47,10 +47,10 @@ export default function RoomOfUnfinishedSpells() {
 
       <Alert variant="destructive" className="mb-8 border-accent/50 text-accent [&>svg]:text-accent">
         <Clock className="h-4 w-4" />
-        <AlertTitle className="font-headline text-lg">
+        <AlertTitle className="font-headline text-2xl">
           🪄 Start Your Magical Journey in Ravenclaw! 🦅
         </AlertTitle>
-        <AlertDescription className="text-accent/90">
+        <AlertDescription className="text-accent/90 text-base space-y-2 mt-2">
             <p>
               All features are first built here —{" "}
               <strong className="font-bold text-white">
@@ -58,7 +58,7 @@ export default function RoomOfUnfinishedSpells() {
               </strong>{" "}
               ✨
             </p>
-            <p className="text-xs mt-2">
+            <p>
               Next, you’ll move to Gryffindor, then Slytherin, and finally
               Hufflepuff. You must go in this order — just like a true wizarding
               path! Use the themes button in the top right to switch. 🧙‍♂️
