@@ -1,6 +1,6 @@
 'use client';
 import type { ReactNode } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { SidebarProvider, Sidebar, SidebarInset } from '@/components/ui/sidebar';
 import AppSidebar from './sidebar';
 import AppHeader from './header';
@@ -29,19 +29,21 @@ const db = getFirestore(app);
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const { setTheme } = useTheme();
   const currentUser = mockUsers[0];
+  const [initialThemeFetched, setInitialThemeFetched] = useState(false);
 
   useEffect(() => {
     const fetchTheme = async () => {
-      if (currentUser) {
+      if (currentUser && !initialThemeFetched) {
         const userDocRef = doc(db, 'users', currentUser.id);
         const userDoc = await getDoc(userDocRef);
         if (userDoc.exists() && userDoc.data().currentTheme) {
           setTheme(userDoc.data().currentTheme);
         }
+        setInitialThemeFetched(true);
       }
     };
     fetchTheme();
-  }, [currentUser, setTheme]);
+  }, [currentUser, setTheme, initialThemeFetched]);
 
   return (
     <SidebarProvider>
