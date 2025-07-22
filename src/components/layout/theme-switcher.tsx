@@ -87,10 +87,20 @@ export default function ThemeSwitcher() {
           </DropdownMenu>
         </TooltipTrigger>
         <TooltipContent side="bottom" className="max-w-xs text-center p-3">
-          <p>
-            Aha, a curious wizard! The houses follow a destined path. Begin your journey in the wise halls of Ravenclaw, then venture forth to Gryffindor, Slytherin, and Hufflepuff in their turn.
-            <br />
-            <strong className="text-lg block mt-2 text-accent">To experience the full magic of EduVault, you must return to Ravenclaw—simply refresh your browser!</strong>
+          <p className="text-lg font-headline">
+            🪄 Start Your Magical Journey in Ravenclaw! 🦅
+          </p>
+          <p className="mt-2 text-sm">
+            All features are first built here —{" "}
+            <strong className="font-bold text-accent">
+              refresh the link to see the latest magic!
+            </strong>{" "}
+            ✨
+          </p>
+          <p className="mt-4 text-xs text-muted-foreground">
+            Next, you’ll move to Gryffindor, then Slytherin, and finally
+            Hufflepuff. You must go in this order — just like a true wizarding
+            path! 🧙‍♂️
           </p>
         </TooltipContent>
       </Tooltip>
