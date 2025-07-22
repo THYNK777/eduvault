@@ -1,47 +1,15 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Input } from '@/components/ui/input';
-import { Search } from 'lucide-react';
+import { Clock, Search } from 'lucide-react';
 import ProjectCard from '@/components/project-card';
 import { mockProjects } from '@/lib/mock-data';
 import type { Project } from '@/lib/types';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { useToast } from '@/hooks/use-toast';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 export default function RoomOfUnfinishedSpells() {
   const [searchQuery, setSearchQuery] = useState('');
-  const { toast } = useToast();
-
-  useEffect(() => {
-    const hasShownNotice = sessionStorage.getItem('hasShownThemeNotice');
-    if (!hasShownNotice) {
-      toast({
-        duration: 15000, // Make it last a bit longer
-        title: (
-          <p className="text-lg font-headline">
-            🪄 Start Your Magical Journey in Ravenclaw! 🦅
-          </p>
-        ),
-        description: (
-          <div className="space-y-2">
-            <p>
-              All features are first built here —{" "}
-              <strong className="font-bold text-accent">
-                refresh the link to see the latest magic!
-              </strong>{" "}
-              ✨
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Next, you’ll move to Gryffindor, then Slytherin, and finally
-              Hufflepuff. You must go in this order — just like a true wizarding
-              path! 🧙‍♂️
-            </p>
-          </div>
-        ),
-      });
-      sessionStorage.setItem('hasShownThemeNotice', 'true');
-    }
-  }, [toast]);
 
   const filteredProjects = mockProjects.filter((project) =>
     project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -76,6 +44,27 @@ export default function RoomOfUnfinishedSpells() {
         </TooltipProvider>
         <p className="text-muted-foreground mt-2">Discover, collaborate on, and revive dormant academic projects.</p>
       </header>
+
+      <Alert variant="destructive" className="mb-8 border-accent/50 text-accent [&>svg]:text-accent">
+        <Clock className="h-4 w-4" />
+        <AlertTitle className="font-headline text-lg">
+          🪄 Start Your Magical Journey in Ravenclaw! 🦅
+        </AlertTitle>
+        <AlertDescription className="text-accent/90">
+            <p>
+              All features are first built here —{" "}
+              <strong className="font-bold text-white">
+                refresh the link to see the latest magic!
+              </strong>{" "}
+              ✨
+            </p>
+            <p className="text-xs mt-2">
+              Next, you’ll move to Gryffindor, then Slytherin, and finally
+              Hufflepuff. You must go in this order — just like a true wizarding
+              path! 🧙‍♂️
+            </p>
+        </AlertDescription>
+      </Alert>
 
       <div className="relative mb-8">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
