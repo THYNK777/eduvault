@@ -61,7 +61,7 @@ export default function RoomOfUnfinishedSpells() {
             <p className="text-xs mt-2">
               Next, you’ll move to Gryffindor, then Slytherin, and finally
               Hufflepuff. You must go in this order — just like a true wizarding
-              path! 🧙‍♂️
+              path! Use the themes button in the top right to switch. 🧙‍♂️
             </p>
         </AlertDescription>
       </Alert>
