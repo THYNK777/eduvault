@@ -7,7 +7,7 @@ import { mockProjects } from '@/lib/mock-data';
 import { WandSparkles } from 'lucide-react';
 
 export default function VaultPage() {
-  const projectsForRecruitment = mockProjects.filter(p => !p.isComplete).slice(0, 6);
+  const projectsForRecruitment = mockProjects.filter(p => ['proj-stove', 'proj-lawyer', 'proj-mirror'].includes(p.id));
 
   return (
     <div className="max-w-6xl mx-auto">
