@@ -43,7 +43,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       }
     };
     fetchTheme();
-  }, [currentUser, setTheme, initialThemeFetched]);
+  }, [currentUser, initialThemeFetched]);
 
   return (
     <SidebarProvider>
