@@ -10,6 +10,22 @@ import { WandSparkles } from 'lucide-react';
 export default function VaultPage() {
   const projectsForRecruitment = mockProjects.filter(p => ['proj-stove', 'proj-lawyer', 'proj-mirror'].includes(p.id));
 
+  const openForm = () => {
+    // @ts-ignore
+    if (window.formsapp) {
+        // @ts-ignore
+        new formsapp('687f9312c2528d0002d2d6e5', 'popup', {
+            overlay: 'rgba(45,45,45,0.5)',
+            width: '800px',
+            height: '600px',
+            openingAnimation: {
+                entrance: 'animate__fadeIn',
+                exit: 'animate__fadeOut',
+            },
+        }).open();
+    }
+  };
+
   return (
     <div className="max-w-6xl mx-auto">
       <header className="mb-12 text-center">
@@ -26,23 +42,17 @@ export default function VaultPage() {
       </div>
 
       <div className="text-center mt-16">
-        <button formsappId="687f9312c2528d0002d2d6e5"></button>
+        <Button
+          onClick={openForm}
+          size="lg"
+          className="px-8 py-6 text-lg font-bold shadow-lg shadow-accent/40 transition-all duration-300 hover:shadow-xl hover:shadow-accent/60 hover:scale-105"
+        >
+          <WandSparkles className="mr-3 h-6 w-6" />
+          Add a New Spell
+        </Button>
         <Script
           src="https://forms.app/cdn/embed.js"
           strategy="lazyOnload"
-          onLoad={() => {
-            // @ts-ignore
-            new formsapp('687f9312c2528d0002d2d6e5', 'popup', {
-              overlay: 'rgba(45,45,45,0.5)',
-              button: { color: '#ff9e24', text: 'Add a new spell' },
-              width: '800px',
-              height: '600px',
-              openingAnimation: {
-                entrance: 'animate__fadeIn',
-                exit: 'animate__fadeOut',
-              },
-            }, 'https://8scrmn46.forms.app');
-          }}
         />
       </div>
     </div>
