@@ -11,7 +11,9 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 export default function RoomOfUnfinishedSpells() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredProjects = mockProjects.filter((project) =>
+  const featuredProjects = mockProjects.filter(p => ['proj-gadkari', 'proj-warikoo'].includes(p.id));
+
+  const filteredProjects = featuredProjects.filter((project) =>
     project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     project.field.toLowerCase().includes(searchQuery.toLowerCase())

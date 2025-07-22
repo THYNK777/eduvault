@@ -4,7 +4,7 @@ export const mockUsers: User[] = [
   {
     id: 'user-1',
     name: 'Nitin Gadkari',
-    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarUrl: 'https://www.bjp.org/files/inline-images/2.jpg',
     skills: ['Python', 'PyTorch', 'Natural Language Processing', 'Generative Models'],
   },
   {
