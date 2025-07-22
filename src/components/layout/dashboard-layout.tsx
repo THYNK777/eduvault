@@ -29,21 +29,28 @@ const db = getFirestore(app);
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const { setTheme } = useTheme();
   const currentUser = mockUsers[0];
-  const [initialThemeFetched, setInitialThemeFetched] = useState(false);
 
   useEffect(() => {
+    let isMounted = true;
     const fetchTheme = async () => {
-      if (currentUser && !initialThemeFetched) {
+      if (currentUser) {
         const userDocRef = doc(db, 'users', currentUser.id);
-        const userDoc = await getDoc(userDocRef);
-        if (userDoc.exists() && userDoc.data().currentTheme) {
-          setTheme(userDoc.data().currentTheme);
+        try {
+            const userDoc = await getDoc(userDocRef);
+            if (isMounted && userDoc.exists() && userDoc.data().currentTheme) {
+              setTheme(userDoc.data().currentTheme);
+            }
+        } catch (error) {
+            console.error("Error fetching theme:", error);
         }
-        setInitialThemeFetched(true);
       }
     };
     fetchTheme();
-  }, [currentUser, initialThemeFetched]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [currentUser, setTheme]);
 
   return (
     <SidebarProvider>
