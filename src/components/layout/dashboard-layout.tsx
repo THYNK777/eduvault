@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     return () => {
       isMounted = false;
     };
-  }, [currentUser]);
+  }, [currentUser.id]);
 
   return (
     <SidebarProvider>
