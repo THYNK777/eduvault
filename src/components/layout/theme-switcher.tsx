@@ -34,18 +34,18 @@ const db = getFirestore(app);
 const availableThemes = ["ravenclaw", "gryffindor", "slytherin", "hufflepuff"];
 
 export default function ThemeSwitcher() {
-  const { setTheme } = useTheme();
+  const { setTheme: setCurrentTheme } = useTheme();
   const currentUser = mockUsers[0];
 
-  const handleThemeChange = async (theme: string) => {
-    setTheme(theme);
+  const handleThemeChange = async (newTheme: string) => {
+    setCurrentTheme(newTheme);
     if (currentUser) {
       const userDocRef = doc(db, "users", currentUser.id);
       try {
         await setDoc(
           userDocRef,
           {
-            currentTheme: theme,
+            currentTheme: newTheme,
             availableThemes: availableThemes,
           },
           { merge: true }
