@@ -43,12 +43,12 @@ export const mockProjects: Project[] = [
   },
   {
     id: 'proj-2',
-    title: 'Steve Jobs – “The Dots Will Connect”',
+    title: 'Ankur Warikoo – “The Dots Will Connect”',
     description: `💡 "What feels like a mess today may become your masterpiece tomorrow — don’t quit on your dots."`,
     field: 'Potions',
     tags: ['Biochemistry', 'Synthetic Biology', 'CRISPR', 'Metabolic Engineering'],
-    ownerId: 'user-2',
-    teamIds: ['user-2', 'user-3'],
+    ownerId: 'user-4',
+    teamIds: ['user-4', 'user-2'],
     isComplete: false,
     mainContent: `You can’t connect the dots looking forward — only looking back. It’s tempting to dismiss that old research draft, that half-coded app, or the notebook full of scattered thoughts. But these fragments carry more weight than we realize. Every incomplete idea is a seed — sometimes it just needs time, perspective, or the right people to help it grow.
 
