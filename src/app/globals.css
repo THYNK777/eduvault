@@ -117,18 +117,18 @@ body {
 
   .hufflepuff {
     --background: 45 15% 10%; /* Warm, dark brown-black */
-    --foreground: 45 30% 90%; /* Creamy off-white */
+    --foreground: 45 30% 90%; /* Creamy off-white - F5F1E3 */
     --card: 45 20% 15%; /* Dark, earthy brown */
     --card-foreground: 45 30% 90%;
     --popover: 45 15% 10%;
     --popover-foreground: 45 30% 90%;
     --primary: 48 95% 55%; /* Bright, cheerful Yellow */
     --primary-foreground: 45 25% 10%; /* Dark text on primary */
-    --secondary: 0 0% 15%; /* Muted Black */
+    --secondary: 0 0% 0%; /* Muted Black */
     --secondary-foreground: 45 30% 90%;
     --muted: 0 0% 15%;
     --muted-foreground: 45 15% 60%;
-    --accent: 48 60% 50%; /* D4AF37 */
+    --accent: 48 60% 50%; /* D4AF37 - Gold */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 45 30% 90%;
