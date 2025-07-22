@@ -1,14 +1,47 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import ProjectCard from '@/components/project-card';
 import { mockProjects } from '@/lib/mock-data';
 import type { Project } from '@/lib/types';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useToast } from '@/hooks/use-toast';
 
 export default function RoomOfUnfinishedSpells() {
   const [searchQuery, setSearchQuery] = useState('');
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const hasShownNotice = sessionStorage.getItem('hasShownThemeNotice');
+    if (!hasShownNotice) {
+      toast({
+        duration: 15000, // Make it last a bit longer
+        title: (
+          <p className="text-lg font-headline">
+            🪄 Start Your Magical Journey in Ravenclaw! 🦅
+          </p>
+        ),
+        description: (
+          <div className="space-y-2">
+            <p>
+              All features are first built here —{" "}
+              <strong className="font-bold text-accent">
+                refresh the link to see the latest magic!
+              </strong>{" "}
+              ✨
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Next, you’ll move to Gryffindor, then Slytherin, and finally
+              Hufflepuff. You must go in this order — just like a true wizarding
+              path! 🧙‍♂️
+            </p>
+          </div>
+        ),
+      });
+      sessionStorage.setItem('hasShownThemeNotice', 'true');
+    }
+  }, [toast]);
 
   const filteredProjects = mockProjects.filter((project) =>
     project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

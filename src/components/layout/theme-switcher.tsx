@@ -14,8 +14,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -36,11 +34,11 @@ const db = getFirestore(app);
 const availableThemes = ["ravenclaw", "gryffindor", "slytherin", "hufflepuff"];
 
 export default function ThemeSwitcher() {
-  const { setTheme: setCurrentTheme } = useTheme();
+  const { setTheme } = useTheme();
   const currentUser = mockUsers[0];
 
   const handleThemeChange = async (newTheme: string) => {
-    setCurrentTheme(newTheme);
+    setTheme(newTheme);
     if (currentUser) {
       const userDocRef = doc(db, "users", currentUser.id);
       try {
@@ -59,51 +57,28 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                <span className="sr-only">Toggle theme</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => handleThemeChange("ravenclaw")}>
-                Ravenclaw
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleThemeChange("gryffindor")}>
-                Gryffindor
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleThemeChange("slytherin")}>
-                Slytherin
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleThemeChange("hufflepuff")}>
-                Hufflepuff
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </TooltipTrigger>
-        <TooltipContent side="bottom" className="max-w-xs text-center p-3">
-          <p className="text-lg font-headline">
-            🪄 Start Your Magical Journey in Ravenclaw! 🦅
-          </p>
-          <p className="mt-2 text-sm">
-            All features are first built here —{" "}
-            <strong className="font-bold text-accent">
-              refresh the link to see the latest magic!
-            </strong>{" "}
-            ✨
-          </p>
-          <p className="mt-4 text-xs text-muted-foreground">
-            Next, you’ll move to Gryffindor, then Slytherin, and finally
-            Hufflepuff. You must go in this order — just like a true wizarding
-            path! 🧙‍♂️
-          </p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => handleThemeChange("ravenclaw")}>
+          Ravenclaw
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange("gryffindor")}>
+          Gryffindor
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange("slytherin")}>
+          Slytherin
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange("hufflepuff")}>
+          Hufflepuff
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
