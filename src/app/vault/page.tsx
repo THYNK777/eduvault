@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Script from 'next/script';
 import { Button } from '@/components/ui/button';
 import JoinProjectCard from './join-project-card';
 import { mockProjects } from '@/lib/mock-data';
@@ -25,12 +26,24 @@ export default function VaultPage() {
       </div>
 
       <div className="text-center mt-16">
-        <Button asChild size="lg" className="transition-all duration-300 transform hover:scale-105">
-          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-             <WandSparkles className="mr-2 h-5 w-5" />
-            Add a new spell
-          </a>
-        </Button>
+        <button formsappId="687f9312c2528d0002d2d6e5"></button>
+        <Script
+          src="https://forms.app/cdn/embed.js"
+          strategy="lazyOnload"
+          onLoad={() => {
+            // @ts-ignore
+            new formsapp('687f9312c2528d0002d2d6e5', 'popup', {
+              overlay: 'rgba(45,45,45,0.5)',
+              button: { color: '#ff9e24', text: 'Add a new spell' },
+              width: '800px',
+              height: '600px',
+              openingAnimation: {
+                entrance: 'animate__fadeIn',
+                exit: 'animate__fadeOut',
+              },
+            }, 'https://8scrmn46.forms.app');
+          }}
+        />
       </div>
     </div>
   );
