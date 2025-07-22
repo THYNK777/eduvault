@@ -34,11 +34,11 @@ const db = getFirestore(app);
 const availableThemes = ["ravenclaw", "gryffindor", "slytherin", "hufflepuff"];
 
 export default function ThemeSwitcher() {
-  const { setTheme: setCurrentTheme } = useTheme();
+  const { setTheme } = useTheme();
   const currentUser = mockUsers[0];
 
   const handleThemeChange = async (newTheme: string) => {
-    setCurrentTheme(newTheme);
+    setTheme(newTheme);
     if (currentUser) {
       const userDocRef = doc(db, "users", currentUser.id);
       try {
