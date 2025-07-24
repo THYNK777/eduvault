@@ -9,6 +9,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 
+// A simple markdown to HTML converter
+function markdownToHtml(text: string) {
+    // Links: [text](url)
+    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">$1</a>');
+    // Simple paragraphs
+    return text.split('\n').filter(p => p.trim() !== '').map(p => `<p>${p}</p>`).join('');
+}
+
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = mockProjects.find((p) => p.id === params.id);
 
@@ -21,7 +29,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
   // Split the content to style the attribution separately
   const contentParts = project.mainContent.split('\n\n—');
-  const mainQuote = contentParts[0];
+  const mainContentHtml = markdownToHtml(contentParts[0]);
   const attribution = contentParts.length > 1 ? `—${contentParts[1]}` : '';
 
   return (
@@ -60,7 +68,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                     <CardTitle className="font-headline text-2xl">Project Grimoire</CardTitle>
                 </CardHeader>
                 <CardContent className="prose prose-invert max-w-none text-muted-foreground/90">
-                    <p>{mainQuote}</p>
+                    <div dangerouslySetInnerHTML={{ __html: mainContentHtml }} />
                     {attribution && <p className="font-bold text-right">{attribution}</p>}
                 </CardContent>
             </Card>
