@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         hostname: 'career.webindia123.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'robbreport.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
