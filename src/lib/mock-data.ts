@@ -91,8 +91,8 @@ export const mockProjects: Project[] = [
 When Steve Jobs dropped out of college, learned calligraphy, and tinkered with design — none of it made sense then. But years later, those dots became the aesthetic soul of Apple. What you create today may feel pointless. But in hindsight, it might be the very moment your future self is grateful for.
 
 So don’t be afraid of the unfinished. Embrace the mess. Trust your instincts. Keep building. Because masterpieces are often born out of abandoned drafts — brought back to life by someone who refused to let them die.`,
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'Ankur Warikoo',
+    imageUrl: 'https://career.webindia123.com/career/options/images/biochemistry.jpg',
+    imageHint: 'biochemistry lab',
   },
   {
     id: 'proj-stove',

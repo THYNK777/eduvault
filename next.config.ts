@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.bjp.org',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'career.webindia123.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
