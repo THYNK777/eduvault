@@ -20,11 +20,11 @@ export default function Logo({ className }: { className?: string }) {
       <path d="M12 10v2.5l1.5 1" /> 
       <path d="M11.5 1.5h1l.5 1.5h-2z" />
 
-      {/* Royal Scroll */}
-      <path d="M4 2.5c0-1 1-1.5 2-1.5s2 .5 2 1.5v18c0 1-1 1.5-2 1.5s-2-.5-2-1.5z" />
-      <path d="M20 2.5c0-1-1-1.5-2-1.5s-2 .5-2 1.5v18c0 1 1 1.5 2 1.5s2-.5 2-1.5z" />
-      <path d="M8 4h8" />
-      <path d="M8 20h8" />
+      {/* Royal Scroll (Top/Bottom) */}
+      <path d="M2.5 4c-1 0-1.5 1-1.5 2s.5 2 1.5 2h18c1 0 1.5-1 1.5-2s-.5-2-1.5-2z" />
+      <path d="M2.5 20c-1 0-1.5-1-1.5-2s.5-2 1.5-2h18c1 0 1.5 1 1.5 2s-.5 2-1.5 2z" />
+      <path d="M4 8v8" />
+      <path d="M20 8v8" />
     </svg>
   )
 }
