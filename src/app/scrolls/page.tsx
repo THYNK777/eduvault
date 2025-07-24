@@ -25,7 +25,7 @@ export default function ScrollsPage() {
         <CardHeader>
           <div className="relative h-80 w-full">
             <Image
-              src="https://placehold.co/1200x800.png"
+              src="https://placehold.co/600x400.png"
               alt="Cybersecurity concept"
               layout="fill"
               objectFit="cover"
