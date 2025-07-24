@@ -7,16 +7,24 @@ export default function Logo({ className }: { className?: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={cn("lucide lucide-vault-scroll", className)}
     >
-      <rect x="3" y="4" width="18" height="16" rx="2" />
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 12h0" />
-      <path d="M6 4V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v2" />
-      <path d="M6 20v2a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-2" />
+      {/* Vault Door */}
+      <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="2" />
+      
+      {/* Pocket Watch Lock */}
+      <circle cx="12" cy="12" r="3.5" />
+      <path d="M12 10v2.5l1.5 1" /> 
+      <path d="M11.5 1.5h1l.5 1.5h-2z" />
+
+      {/* Royal Scroll */}
+      <path d="M4 2.5c0-1 1-1.5 2-1.5s2 .5 2 1.5v18c0 1-1 1.5-2 1.5s-2-.5-2-1.5z" />
+      <path d="M20 2.5c0-1-1-1.5-2-1.5s-2 .5-2 1.5v18c0 1 1 1.5 2 1.5s2-.5 2-1.5z" />
+      <path d="M8 4h8" />
+      <path d="M8 20h8" />
     </svg>
   )
 }
