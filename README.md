@@ -29,12 +29,3 @@ EduVault is a magical academic project collaboration platform inspired by the wo
 - A **witty chatbot assistant** embedded in the site.
 - Helps users navigate, answer questions, and provides a magical user experience.
 
----
-
-## Installation and Setup
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/eduvault.git
-   cd eduvault
